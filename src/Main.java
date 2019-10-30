@@ -4,16 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        for (int a = 1; a <= x; a++) {
-            for (int b = 1; b <= x - a; b++) {
-                System.out.print(' ');
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+
+        int gcd=0;
+        for (int i=1;i<=a;i++) {
+            if (a % i == 0&&b%i==0) {
+                gcd=i;
             }
-            for (int b = 1; b<= a; b++) {
-                System.out.print('*');
-            }
-            System.out.println();
+        }
+        System.out.println(gcd);
+        System.out.println(a*b/gcd);
         }
     }
-    }
+
 
